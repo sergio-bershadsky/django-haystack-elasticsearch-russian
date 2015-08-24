@@ -7,8 +7,7 @@ from haystack.backends import elasticsearch_backend
 elasticsearch_backend.DEFAULT_FIELD_MAPPING = {'type': 'string', 'analyzer': 'russian_and_english'}
 
 
-
-class ElasticSearchEngine(ElasticsearchSearchBackend):
+class RussianElasticSearchBackend(ElasticsearchSearchBackend):
 
     DEFAULT_SETTINGS = {
         'settings': {
@@ -68,5 +67,5 @@ class ElasticSearchEngine(ElasticsearchSearchBackend):
     }
 
 
-class CustomElasticSearchEngine(ElasticsearchSearchEngine):
-    backend = ElasticSearchEngine
+class RussianElasticSearchEngine(ElasticsearchSearchEngine):
+    backend = RussianElasticSearchBackend
